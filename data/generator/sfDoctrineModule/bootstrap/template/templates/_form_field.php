@@ -4,7 +4,7 @@
   [?php include_component('<?php echo $this->getModuleName() ?>', $name, array('form' => $form, 'attributes' => $attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes)) ?]
 [?php else: ?]
   <div class="form-group [?php echo $class ?] [?php $form[$name]->hasError() and print 'has-error' ?]">
-      [?php echo $form[$name]->renderLabel($label, array('class' => 'col-sm-4 control-label')) ?]
+      [?php echo $form[$name]->renderLabel($label, array('class' => 'col-sm-2 control-label')) ?]
       
       <div class="[?php echo $form[$name]->getWidget()->getOption('content-handler'); ?] col-sm-8 [?php echo $class ?]">
         [?php if($form[$name]->getWidget()->hasOption('content-handler')): ?]
