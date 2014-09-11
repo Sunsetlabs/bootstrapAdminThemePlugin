@@ -7,10 +7,10 @@
 <div id="sf_admin_container">
   <?php if ($this->configuration->hasFilterForm()): ?>
     <div class="pull-right">
-      <a href="#filterPopup" class="btn" data-toggle="modal"><i class="icon-search"></i> Filtrar</a>
+      <a href="#filterPopup" class="btn btn-primary" data-toggle="modal"><i class="icon-search"></i> Filtrar</a>
     </div>
   <?php endif; ?>
-  <h1>Listado</h1>
+  <h1>[?php echo <?php echo $this->getI18NString('list.title') ?> ?]</h1>
   
   <?php if ($this->configuration->hasFilterForm()): ?>
     [?php $filterValues = $sf_user->getRawValue()->getAttribute($this->getModuleName().'.filters', array(), 'admin_module'); if (!empty($filterValues)): ?]
