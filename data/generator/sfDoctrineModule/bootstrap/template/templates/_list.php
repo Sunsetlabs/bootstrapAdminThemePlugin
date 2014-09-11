@@ -20,6 +20,9 @@
       <tfoot>
         <tr>
           <th colspan="<?php echo count($this->configuration->getValue('list.display')) + ($this->configuration->getValue('list.object_actions') ? 1 : 0) + ($this->configuration->getValue('list.batch_actions') ? 1 : 0) ?>">
+            <div class="pull-right">
+              Total: [?php echo $pager->getNbResults(); ?]
+            </div>
             [?php if ($pager->haveToPaginate()): ?]
               [?php include_partial('<?php echo $this->getModuleName() ?>/pagination', array('pager' => $pager)) ?]
             [?php endif; ?]
